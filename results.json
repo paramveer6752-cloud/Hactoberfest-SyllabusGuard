@@ -1,0 +1,770 @@
+{
+    "project": "SyllabusGuard",
+    "model": "llama3.2:3b",
+    "test_cases": 10,
+    "baseline": {
+        "accuracy": 60.0
+    },
+    "with_skill": {
+        "accuracy": 65.0
+    },
+    "improvement": 5.0,
+    "skill_effect": {
+        "helped": 5,
+        "no_change": 2,
+        "hurt": 3
+    },
+    "results": [
+        {
+            "id": "TC001",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "Matrices",
+                        "Determinants",
+                        "Differential Equations"
+                    ],
+                    "partially_covered": [],
+                    "missing": [
+                        "Probability"
+                    ],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 0,
+                    "priority_order": [
+                        "Matrices",
+                        "Determinants",
+                        "Differential Equations"
+                    ],
+                    "recommended_study_order": [
+                        "Matrices",
+                        "Determinants",
+                        "Differential Equations",
+                        "Probability"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 1,
+                    "maximum": 4,
+                    "accuracy": 25.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [
+                        "Matrices",
+                        "Determinants"
+                    ],
+                    "partially_covered": [
+                        "Differential Equations"
+                    ],
+                    "missing": [
+                        "Differential Equations"
+                    ],
+                    "out_of_syllabus": [
+                        "Probability"
+                    ],
+                    "coverage_percentage": 66.67,
+                    "priority_order": [
+                        "Differential Equations",
+                        "Matrices",
+                        "Determinants"
+                    ],
+                    "recommended_study_order": [
+                        "Differential Equations",
+                        "Matrices",
+                        "Determinants"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 3,
+                    "maximum": 4,
+                    "accuracy": 75.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "Matrices",
+                    "Determinants"
+                ],
+                "partially_covered": [],
+                "missing": [
+                    "Differential Equations"
+                ],
+                "out_of_syllabus": [
+                    "Probability"
+                ],
+                "coverage_percentage": 66.67
+            },
+            "improvement": 50.0
+        },
+        {
+            "id": "TC002",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "First Degree ODE",
+                        "Matrix Algebra"
+                    ],
+                    "partially_covered": [],
+                    "missing": [],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 100,
+                    "priority_order": [
+                        "First Degree ODE",
+                        "Matrix Algebra"
+                    ],
+                    "recommended_study_order": [
+                        "First Degree ODE",
+                        "Matrix Algebra"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 3,
+                    "maximum": 4,
+                    "accuracy": 75.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [
+                        "First Order Differential Equations",
+                        "Matrices"
+                    ],
+                    "partially_covered": [],
+                    "missing": [
+                        "First Degree ODE"
+                    ],
+                    "out_of_syllabus": [
+                        "Matrix Algebra"
+                    ],
+                    "coverage_percentage": 0,
+                    "priority_order": [
+                        "First Degree ODE",
+                        "Matrices"
+                    ],
+                    "recommended_study_order": [
+                        "First Degree ODE",
+                        "Matrices"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 2,
+                    "maximum": 4,
+                    "accuracy": 50.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "First Order Differential Equations",
+                    "Matrices"
+                ],
+                "partially_covered": [],
+                "missing": [],
+                "out_of_syllabus": [],
+                "coverage_percentage": 100
+            },
+            "improvement": -25.0
+        },
+        {
+            "id": "TC003",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "Differential Equations",
+                        "Matrices"
+                    ],
+                    "partially_covered": [],
+                    "missing": [],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 100,
+                    "priority_order": [
+                        "Differential Equations",
+                        "Matrices"
+                    ],
+                    "recommended_study_order": [
+                        "Basic Differential Equations",
+                        "Matrices"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 2,
+                    "maximum": 4,
+                    "accuracy": 50.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [
+                        "Matrices"
+                    ],
+                    "partially_covered": [
+                        "Differential Equations"
+                    ],
+                    "missing": [
+                        "Differential Equations"
+                    ],
+                    "out_of_syllabus": [
+                        "Basic Differential Equations"
+                    ],
+                    "coverage_percentage": 0,
+                    "priority_order": [
+                        "Basic Differential Equations"
+                    ],
+                    "recommended_study_order": [
+                        "Basic Differential Equations",
+                        "Matrices"
+                    ],
+                    "warnings": [
+                        "Differential Equations is partially covered and missing, consider revising"
+                    ]
+                },
+                "score": {
+                    "score": 2,
+                    "maximum": 4,
+                    "accuracy": 50.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "Matrices"
+                ],
+                "partially_covered": [
+                    "Differential Equations"
+                ],
+                "missing": [],
+                "out_of_syllabus": [],
+                "coverage_percentage": 50
+            },
+            "improvement": 0.0
+        },
+        {
+            "id": "TC004",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "Arrays",
+                        "Stacks"
+                    ],
+                    "partially_covered": [],
+                    "missing": [
+                        "Linked Lists",
+                        "Queues"
+                    ],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 66.67,
+                    "priority_order": [
+                        "Arrays",
+                        "Stacks",
+                        "Linked Lists",
+                        "Queues"
+                    ],
+                    "recommended_study_order": [
+                        "Arrays",
+                        "Stacks",
+                        "Linked Lists",
+                        "Queues"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 4,
+                    "maximum": 4,
+                    "accuracy": 100.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [
+                        "Arrays",
+                        "Stacks"
+                    ],
+                    "partially_covered": [
+                        "Linked Lists"
+                    ],
+                    "missing": [
+                        "Queues"
+                    ],
+                    "out_of_syllabus": [
+                        "Determinants",
+                        "Probability"
+                    ],
+                    "coverage_percentage": 66.67,
+                    "priority_order": [
+                        "Queues",
+                        "Linked Lists"
+                    ],
+                    "recommended_study_order": [
+                        "Queues",
+                        "Linked Lists",
+                        "Stacks",
+                        "Arrays"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 1,
+                    "maximum": 4,
+                    "accuracy": 25.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "Arrays",
+                    "Stacks"
+                ],
+                "partially_covered": [],
+                "missing": [
+                    "Linked Lists",
+                    "Queues"
+                ],
+                "out_of_syllabus": [],
+                "coverage_percentage": 50
+            },
+            "improvement": -75.0
+        },
+        {
+            "id": "TC005",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "Arrays",
+                        "Linked Lists",
+                        "Queues"
+                    ],
+                    "partially_covered": [],
+                    "missing": [],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 0,
+                    "priority_order": [
+                        "Arrays",
+                        "Linked Lists",
+                        "Queues"
+                    ],
+                    "recommended_study_order": [
+                        "Arrays",
+                        "Linked Lists",
+                        "Queues"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 2,
+                    "maximum": 4,
+                    "accuracy": 50.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [
+                        "Arrays"
+                    ],
+                    "partially_covered": [],
+                    "missing": [
+                        "Linked Lists",
+                        "Queues"
+                    ],
+                    "out_of_syllabus": [
+                        "Probability"
+                    ],
+                    "coverage_percentage": 0,
+                    "priority_order": [
+                        "Linked Lists",
+                        "Queues"
+                    ],
+                    "recommended_study_order": [
+                        "Linked Lists",
+                        "Queues",
+                        "Arrays"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 3,
+                    "maximum": 4,
+                    "accuracy": 75.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "Arrays"
+                ],
+                "partially_covered": [],
+                "missing": [
+                    "Linked Lists",
+                    "Queues"
+                ],
+                "out_of_syllabus": [],
+                "coverage_percentage": 33.33
+            },
+            "improvement": 25.0
+        },
+        {
+            "id": "TC006",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "C Programming",
+                        "Data Structures"
+                    ],
+                    "partially_covered": [],
+                    "missing": [
+                        "Digital Marketing"
+                    ],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 100,
+                    "priority_order": [
+                        "C Programming",
+                        "Data Structures"
+                    ],
+                    "recommended_study_order": [
+                        "C Programming",
+                        "Data Structures"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 2,
+                    "maximum": 4,
+                    "accuracy": 50.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [
+                        "C Programming",
+                        "Data Structures"
+                    ],
+                    "partially_covered": [],
+                    "missing": [],
+                    "out_of_syllabus": [
+                        "Digital Marketing"
+                    ],
+                    "coverage_percentage": 100.0,
+                    "priority_order": [
+                        "C Programming",
+                        "Data Structures"
+                    ],
+                    "recommended_study_order": [
+                        "C Programming",
+                        "Data Structures",
+                        "Digital Marketing"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 4,
+                    "maximum": 4,
+                    "accuracy": 100.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "C Programming",
+                    "Data Structures"
+                ],
+                "partially_covered": [],
+                "missing": [],
+                "out_of_syllabus": [
+                    "Digital Marketing"
+                ],
+                "coverage_percentage": 100
+            },
+            "improvement": 50.0
+        },
+        {
+            "id": "TC007",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "Arrays",
+                        "Linked Lists",
+                        "Trees"
+                    ],
+                    "partially_covered": [],
+                    "missing": [],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 100,
+                    "priority_order": [
+                        "Arrays",
+                        "Linked Lists",
+                        "Trees"
+                    ],
+                    "recommended_study_order": [
+                        "Arrays",
+                        "Linked Lists",
+                        "Trees"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 4,
+                    "maximum": 4,
+                    "accuracy": 100.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [
+                        "Arrays",
+                        "Linked Lists",
+                        "Trees"
+                    ],
+                    "partially_covered": [],
+                    "missing": [],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 100.0,
+                    "priority_order": [
+                        "Arrays",
+                        "Trees",
+                        "Linked Lists"
+                    ],
+                    "recommended_study_order": [
+                        "Arrays",
+                        "Trees",
+                        "Linked Lists"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 4,
+                    "maximum": 4,
+                    "accuracy": 100.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "Arrays",
+                    "Linked Lists",
+                    "Trees"
+                ],
+                "partially_covered": [],
+                "missing": [],
+                "out_of_syllabus": [],
+                "coverage_percentage": 100
+            },
+            "improvement": 0.0
+        },
+        {
+            "id": "TC008",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "TCP",
+                        "HTTP"
+                    ],
+                    "partially_covered": [
+                        "IP"
+                    ],
+                    "missing": [],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 80,
+                    "priority_order": [
+                        "TCP",
+                        "HTTP",
+                        "IP"
+                    ],
+                    "recommended_study_order": [
+                        "TCP",
+                        "HTTP",
+                        "IP"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 1,
+                    "maximum": 4,
+                    "accuracy": 25.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [
+                        "TCP",
+                        "HTTP"
+                    ],
+                    "partially_covered": [
+                        "UDP"
+                    ],
+                    "missing": [
+                        "IP"
+                    ],
+                    "out_of_syllabus": [
+                        "IP"
+                    ],
+                    "coverage_percentage": 50,
+                    "priority_order": [
+                        "IP"
+                    ],
+                    "recommended_study_order": [
+                        "IP",
+                        "UDP",
+                        "TCP",
+                        "HTTP"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 2,
+                    "maximum": 4,
+                    "accuracy": 50.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "TCP",
+                    "HTTP"
+                ],
+                "partially_covered": [],
+                "missing": [
+                    "UDP"
+                ],
+                "out_of_syllabus": [
+                    "IP"
+                ],
+                "coverage_percentage": 66.67
+            },
+            "improvement": 25.0
+        },
+        {
+            "id": "TC009",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "Pointers in C"
+                    ],
+                    "partially_covered": [],
+                    "missing": [],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 100,
+                    "priority_order": [
+                        "Pointers in C"
+                    ],
+                    "recommended_study_order": [
+                        "Pointers"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 4,
+                    "maximum": 4,
+                    "accuracy": 100.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [],
+                    "partially_covered": [],
+                    "missing": [
+                        "Pointers in C"
+                    ],
+                    "out_of_syllabus": [
+                        "Pointers"
+                    ],
+                    "coverage_percentage": 0,
+                    "priority_order": [],
+                    "recommended_study_order": [],
+                    "warnings": [
+                        "Out-of-syllabus topic: Pointers"
+                    ]
+                },
+                "score": {
+                    "score": 1,
+                    "maximum": 4,
+                    "accuracy": 25.0
+                }
+            },
+            "expected": {
+                "covered": [
+                    "Pointers in C"
+                ],
+                "partially_covered": [],
+                "missing": [],
+                "out_of_syllabus": [],
+                "coverage_percentage": 100
+            },
+            "improvement": -75.0
+        },
+        {
+            "id": "TC010",
+            "without_skill": {
+                "result": {
+                    "covered": [
+                        "Matrices",
+                        "Differential Equations"
+                    ],
+                    "partially_covered": [],
+                    "missing": [
+                        "Digital Marketing",
+                        "SEO",
+                        "Social Media Marketing"
+                    ],
+                    "out_of_syllabus": [],
+                    "coverage_percentage": 0,
+                    "priority_order": [
+                        "Matrices",
+                        "Differential Equations"
+                    ],
+                    "recommended_study_order": [
+                        "Matrices",
+                        "Differential Equations",
+                        "Digital Marketing",
+                        "SEO",
+                        "Social Media Marketing"
+                    ],
+                    "warnings": []
+                },
+                "score": {
+                    "score": 1,
+                    "maximum": 4,
+                    "accuracy": 25.0
+                }
+            },
+            "with_skill": {
+                "result": {
+                    "covered": [],
+                    "partially_covered": [],
+                    "missing": [
+                        "Matrices",
+                        "Differential Equations"
+                    ],
+                    "out_of_syllabus": [
+                        "Digital Marketing",
+                        "SEO",
+                        "Social Media Marketing"
+                    ],
+                    "coverage_percentage": 0,
+                    "priority_order": [],
+                    "recommended_study_order": [],
+                    "warnings": [
+                        "No study material covers all official syllabus topics."
+                    ]
+                },
+                "score": {
+                    "score": 4,
+                    "maximum": 4,
+                    "accuracy": 100.0
+                }
+            },
+            "expected": {
+                "covered": [],
+                "partially_covered": [],
+                "missing": [
+                    "Matrices",
+                    "Differential Equations"
+                ],
+                "out_of_syllabus": [
+                    "Digital Marketing",
+                    "SEO",
+                    "Social Media Marketing"
+                ],
+                "coverage_percentage": 0
+            },
+            "improvement": 75.0
+        }
+    ]
+}

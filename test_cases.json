@@ -1,0 +1,270 @@
+[
+  {
+    "id": "TC001",
+    "name": "basic_matching",
+    "syllabus": [
+      "Matrices",
+      "Determinants",
+      "Differential Equations"
+    ],
+    "study_material": [
+      "Matrices",
+      "Determinants",
+      "Probability"
+    ],
+    "pyqs": [
+      "Determinant",
+      "Inverse",
+      "Differential Equation"
+    ],
+    "expected": {
+      "covered": [
+        "Matrices",
+        "Determinants"
+      ],
+      "partially_covered": [],
+      "missing": [
+        "Differential Equations"
+      ],
+      "out_of_syllabus": [
+        "Probability"
+      ],
+      "coverage_percentage": 66.67
+    }
+  },
+  {
+    "id": "TC002",
+    "name": "different_wording",
+    "syllabus": [
+      "First Order Differential Equations",
+      "Matrices"
+    ],
+    "study_material": [
+      "First Degree ODE",
+      "Matrix Algebra"
+    ],
+    "pyqs": [],
+    "expected": {
+      "covered": [
+        "First Order Differential Equations",
+        "Matrices"
+      ],
+      "partially_covered": [],
+      "missing": [],
+      "out_of_syllabus": [],
+      "coverage_percentage": 100
+    }
+  },
+  {
+    "id": "TC003",
+    "name": "partial_coverage",
+    "syllabus": [
+      "Differential Equations",
+      "Matrices"
+    ],
+    "study_material": [
+      "Basic Differential Equations",
+      "Matrices"
+    ],
+    "pyqs": [],
+    "expected": {
+      "covered": [
+        "Matrices"
+      ],
+      "partially_covered": [
+        "Differential Equations"
+      ],
+      "missing": [],
+      "out_of_syllabus": [],
+      "coverage_percentage": 50
+    }
+  },
+  {
+    "id": "TC004",
+    "name": "missing_topics",
+    "syllabus": [
+      "Arrays",
+      "Linked Lists",
+      "Stacks",
+      "Queues"
+    ],
+    "study_material": [
+      "Arrays",
+      "Stacks"
+    ],
+    "pyqs": [],
+    "expected": {
+      "covered": [
+        "Arrays",
+        "Stacks"
+      ],
+      "partially_covered": [],
+      "missing": [
+        "Linked Lists",
+        "Queues"
+      ],
+      "out_of_syllabus": [],
+      "coverage_percentage": 50
+    }
+  },
+  {
+    "id": "TC005",
+    "name": "no_pyqs",
+    "syllabus": [
+      "Arrays",
+      "Linked Lists",
+      "Queues"
+    ],
+    "study_material": [
+      "Arrays"
+    ],
+    "pyqs": [],
+    "expected": {
+      "covered": [
+        "Arrays"
+      ],
+      "partially_covered": [],
+      "missing": [
+        "Linked Lists",
+        "Queues"
+      ],
+      "out_of_syllabus": [],
+      "coverage_percentage": 33.33
+    }
+  },
+  {
+    "id": "TC006",
+    "name": "out_of_syllabus",
+    "syllabus": [
+      "C Programming",
+      "Data Structures"
+    ],
+    "study_material": [
+      "C Programming",
+      "Data Structures",
+      "Digital Marketing"
+    ],
+    "pyqs": [],
+    "expected": {
+      "covered": [
+        "C Programming",
+        "Data Structures"
+      ],
+      "partially_covered": [],
+      "missing": [],
+      "out_of_syllabus": [
+        "Digital Marketing"
+      ],
+      "coverage_percentage": 100
+    }
+  },
+  {
+    "id": "TC007",
+    "name": "pyq_priority",
+    "syllabus": [
+      "Arrays",
+      "Linked Lists",
+      "Trees"
+    ],
+    "study_material": [
+      "Arrays",
+      "Linked Lists",
+      "Trees"
+    ],
+    "pyqs": [
+      "Arrays",
+      "Arrays",
+      "Arrays",
+      "Trees",
+      "Linked Lists"
+    ],
+    "expected": {
+      "covered": [
+        "Arrays",
+        "Linked Lists",
+        "Trees"
+      ],
+      "partially_covered": [],
+      "missing": [],
+      "out_of_syllabus": [],
+      "coverage_percentage": 100
+    }
+  },
+  {
+    "id": "TC008",
+    "name": "false_matching",
+    "syllabus": [
+      "TCP",
+      "UDP",
+      "HTTP"
+    ],
+    "study_material": [
+      "TCP",
+      "IP",
+      "HTTP"
+    ],
+    "pyqs": [],
+    "expected": {
+      "covered": [
+        "TCP",
+        "HTTP"
+      ],
+      "partially_covered": [],
+      "missing": [
+        "UDP"
+      ],
+      "out_of_syllabus": [
+        "IP"
+      ],
+      "coverage_percentage": 66.67
+    }
+  },
+  {
+    "id": "TC009",
+    "name": "ambiguous_match",
+    "syllabus": [
+      "Pointers in C"
+    ],
+    "study_material": [
+      "Pointers"
+    ],
+    "pyqs": [],
+    "expected": {
+      "covered": [
+        "Pointers in C"
+      ],
+      "partially_covered": [],
+      "missing": [],
+      "out_of_syllabus": [],
+      "coverage_percentage": 100
+    }
+  },
+  {
+    "id": "TC010",
+    "name": "completely_unrelated",
+    "syllabus": [
+      "Matrices",
+      "Differential Equations"
+    ],
+    "study_material": [
+      "Digital Marketing",
+      "SEO",
+      "Social Media Marketing"
+    ],
+    "pyqs": [],
+    "expected": {
+      "covered": [],
+      "partially_covered": [],
+      "missing": [
+        "Matrices",
+        "Differential Equations"
+      ],
+      "out_of_syllabus": [
+        "Digital Marketing",
+        "SEO",
+        "Social Media Marketing"
+      ],
+      "coverage_percentage": 0
+    }
+  }
+]
